@@ -1,13 +1,100 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: "Inter";
+  src: url(./assets/fonts/Inter-VariableFont_slnt_wght.ttf);
 }
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --Soft-orange: hsl(35, 77%, 62%);
+  --Soft-red: hsl(5, 85%, 63%);
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  --Off-white: hsl(36, 100%, 99%);
+  --Grayish-blue: hsl(233, 8%, 79%);
+  --Dark-grayish-blue: hsl(236, 13%, 42%);
+  --Very-dark-blue: hsl(240, 100%, 5%);
+}
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+body {
+  font-family: "Inter";
+  padding: 5rem 10rem;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--Dark-grayish-blue);
+}
+ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+a {
+  text-decoration: none;
+}
+main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding-top: 5rem;
+}
+.main-article {
+  grid-column: span 2;
+  grid-row: span 2;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+.main-article img {
+  grid-column: span 2;
+}
+.main-article h1 {
+  font-weight: 800;
+  font-size: 40px;
+}
+.news-container {
+  grid-row: span 2;
+  background-color: var(--Very-dark-blue);
+  color: var(--Off-white);
+  padding: 2rem;
+}
+.news-container h1 {
+  color: var(--Soft-orange);
+}
+p {
+  color: var(--Dark-grayish-blue);
+  line-height: 20px;
+  font-size: 12px;
+}
+.news-item p {
+  color: var(--Grayish-blue);
+}
+.news-item::before,
+.news-item::after {
+  content: "";
+  height: 2px;
+  width: 100%;
+  display: inline-block;
+}
+.singleCard {
+  padding-top: 2rem;
+  text-align: left;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1rem;
+}
+.singleCard h2 {
+  color: var(--Soft-red);
+}
+button {
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+  background-color: var(--Soft-red);
+  border: none;
+  font-weight: 800;
 }
